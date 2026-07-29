@@ -1,1 +1,161 @@
+<!--
+  Plantilla de Hoja de Vida (HTML) - intex.htlm
+  Reemplaza las marcas {{...}} con tu información real.
+  Instrucciones:
+  - Cambia el texto entre {{doble llaves}} por tus datos.
+  - Si quieres cambiar el diseño, edita la sección <style> al inicio.
+  - Para incluir una foto, reemplaza el atributo src de la etiqueta <img> con la ruta o URL de la imagen.
+  - Guardado en el repositorio: intex.htlm
+-->
 
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hoja de Vida - {{NOMBRE COMPLETO}}</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#ffffff;--muted:#6b7280;--accent:#2563eb}
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:#111}
+    .container{max-width:900px;margin:32px auto;padding:24px}
+    .card{background:var(--card);border-radius:10px;box-shadow:0 6px 20px rgba(16,24,40,.08);padding:28px;display:flex;gap:24px}
+    .left{width:280px}
+    .photo{width:100%;height:280px;background:#e6eefc;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .photo img{width:100%;height:100%;object-fit:cover}
+    h1{margin:0;font-size:22px}
+    h2{margin:8px 0 14px;font-size:14px;color:var(--muted);font-weight:600}
+    .contact p{margin:8px 0;color:var(--muted);font-size:14px}
+    .section{margin-bottom:18px}
+    .section h3{margin:0 0 10px;font-size:15px;color:var(--accent)}
+    .list-item{margin-bottom:12px}
+    .role{font-weight:700}
+    .meta{color:var(--muted);font-size:13px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#eef2ff;color:#1e3a8a;padding:6px 10px;border-radius:999px;font-size:13px}
+    .right{flex:1}
+    .summary{background:#fff;padding:16px;border-radius:8px;margin-bottom:16px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:800px){.card{flex-direction:column}.left{width:100%}.photo{height:200px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <aside class="left">
+        <div class="photo">
+          <!-- Reemplaza src por la URL o ruta de tu foto. Si no quieres foto, deja este espacio vacío o pon un marcador. -->
+          <img src="{{RUTA_O_URL_FOTO}}" alt="Foto de {{NOMBRE COMPLETO}}" onerror="this.style.display='none'">
+        </div>
+
+        <div class="section contact">
+          <h3>Contacto</h3>
+          <p><strong>{{NOMBRE COMPLETO}}</strong></p>
+          <p class="meta">{{TITULO_PROFESIONAL}}</p>
+          <p class="meta">{{CIUDAD}}, {{PAIS}}</p>
+          <p class="meta">Tel: {{TELEFONO}}</p>
+          <p class="meta">Email: <a href="mailto:{{CORREO}}">{{CORREO}}</a></p>
+          <p class="meta">LinkedIn: <a href="{{LINKEDIN}}" target="_blank">{{LINKEDIN}}</a></p>
+          <p class="meta">GitHub: <a href="{{GITHUB}}" target="_blank">{{GITHUB}}</a></p>
+          <p class="meta">Portafolio: <a href="{{PORTAFOLIO}}" target="_blank">{{PORTAFOLIO}}</a></p>
+        </div>
+
+        <div class="section">
+          <h3>Habilidades</h3>
+          <div class="skills">
+            <!-- Añade o borra etiquetas .skill según tus habilidades -->
+            <span class="skill">{{HABILIDAD_1}}</span>
+            <span class="skill">{{HABILIDAD_2}}</span>
+            <span class="skill">{{HABILIDAD_3}}</span>
+            <span class="skill">{{HABILIDAD_4}}</span>
+            <span class="skill">{{HABILIDAD_5}}</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Idiomas</h3>
+          <p class="meta">{{IDIOMA_1}} — {{NIVEL_1}}</p>
+          <p class="meta">{{IDIOMA_2}} — {{NIVEL_2}}</p>
+        </div>
+
+        <div class="section">
+          <h3>Certificaciones y cursos</h3>
+          <p class="meta">• {{CERTIFICACION_1}} — {{INSTITUCION}} ({{AÑO}})</p>
+          <p class="meta">• {{CERTIFICACION_2}} — {{INSTITUCION}} ({{AÑO}})</p>
+        </div>
+      </aside>
+
+      <main class="right">
+        <header class="section summary">
+          <h1>{{NOMBRE COMPLETO}}</h1>
+          <h2>{{TITULO_PROFESIONAL}} · {{AREA}}</h2>
+          <p class="meta">{{RESUMEN_PROFESIONAL}}</p>
+        </header>
+
+        <section class="section">
+          <h3>Experiencia laboral</h3>
+          <div class="list-item">
+            <div class="role">{{PUESTO_1}} — {{EMPRESA_1}}</div>
+            <div class="meta">{{FECHAS_1}} · {{CIUDAD_EMPRESA_1}}</div>
+            <ul>
+              <li>{{LOGRO_1_1}}</li>
+              <li>{{LOGRO_1_2}}</li>
+              <li>{{LOGRO_1_3}}</li>
+            </ul>
+          </div>
+
+          <div class="list-item">
+            <div class="role">{{PUESTO_2}} — {{EMPRESA_2}}</div>
+            <div class="meta">{{FECHAS_2}} · {{CIUDAD_EMPRESA_2}}</div>
+            <ul>
+              <li>{{LOGRO_2_1}}</li>
+              <li>{{LOGRO_2_2}}</li>
+              <li>{{LOGRO_2_3}}</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Educación</h3>
+          <div class="list-item">
+            <div class="role">{{TITULO_EDU_1}} — {{INSTITUCION_EDU_1}}</div>
+            <div class="meta">{{FECHAS_EDU_1}}</div>
+            <p class="meta">{{DETALLES_EDU_1}}</p>
+          </div>
+
+          <div class="list-item">
+            <div class="role">{{TITULO_EDU_2}} — {{INSTITUCION_EDU_2}}</div>
+            <div class="meta">{{FECHAS_EDU_2}}</div>
+            <p class="meta">{{DETALLES_EDU_2}}</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Proyectos relevantes</h3>
+          <div class="list-item">
+            <div class="role">{{PROYECTO_1}}</div>
+            <div class="meta">{{TECNOLOGIAS_PROY_1}} · <a href="{{ENLACE_PROY_1}}" target="_blank">Ver proyecto</a></div>
+            <p>{{DESCRIPCION_PROY_1}}</p>
+          </div>
+
+          <div class="list-item">
+            <div class="role">{{PROYECTO_2}}</div>
+            <div class="meta">{{TECNOLOGIAS_PROY_2}} · <a href="{{ENLACE_PROY_2}}" target="_blank">Ver proyecto</a></div>
+            <p>{{DESCRIPCION_PROY_2}}</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Otros</h3>
+          <p class="meta">Disponibilidad: {{DISPONIBILIDAD}}</p>
+          <p class="meta">Intereses: {{INTERESES}}</p>
+        </section>
+
+        <footer>
+          Última actualización: {{FECHA_ACTUALIZACION}} — Plantilla generada por hoja de vida automática
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
